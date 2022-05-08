@@ -12,14 +12,15 @@ public class CategoryTests {
 	}
 
 	@Test
+	@Category({ SlowTest.class, FatsTest.class })
+	public void testTest() {
+		System.out.println("--------------------testTest--------------");
+	}
+
+	@Test
 	@Category(SlowTest.class)
 	public void testSlowTest() {
 		System.out.println("--------------------SlowTest--------------");
 	}
-	
-	@Test
-	@Category({SlowTest.class, FatsTest.class})
-	public void testTest() {
-		System.out.println("--------------------testTest--------------");
-	}
+
 }
